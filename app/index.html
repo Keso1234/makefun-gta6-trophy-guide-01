@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">All 55 official trophies: <strong>1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze</strong>. 28 are hidden on PlayStation until earned. Every guide below is written for this guide from the official descriptions — where a place or step is not pinned down by the official description, the guide says so instead of inventing it.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Overall progress">
+    <div class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></div>
+    <div class="pct" id="earnedPct">0% to platinum</div>
+    <div class="bar"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
+    <div class="grade-chips" id="gradeChips"></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Guide sections">
+  <button type="button" data-view="checklist" class="active">Checklist</button>
+  <button type="button" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" data-view="missables">Missables <span id="missableCount"></span></button>
+  <button type="button" data-view="planner">Next up <span id="nextUpCount"></span></button>
+</nav>
+
+<section class="controls" aria-label="Filters and progress tools">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Name, description or guide text…" autocomplete="off"></label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Sort
+    <select id="sortFilter">
+      <option value="official">Official order</option>
+      <option value="name">Name A–Z</option>
+      <option value="grade">Grade (best first)</option>
+      <option value="difficulty">Difficulty</option>
+      <option value="missable">Missable first</option>
+    </select>
+  </label>
+  <label class="spoiler-label"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <span class="tool-buttons">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset</button>
+  </span>
+</section>
+<p class="filter-note" id="filterNote"></p>
+<p class="demo-note" id="demoNote" hidden>Sample progress loaded for this preview — press Reset to clear it and start from zero.</p>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="split">
+      <div>
+        <p class="list-heading" id="listHeading"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail" id="detailPane" aria-label="Trophy guide detail"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="view-intro">Built from the official descriptions: story first, then strangers and side missions, then activities, then collectibles, then money and cleanup. The platinum is the last trophy — it unlocks when the other 54 are earned. Times are estimates, not promises; the game is a day old and nothing here has been checked in play yet.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missable trophies — do these when you see them</h2>
+    <p class="view-intro">These 10 trophies are flagged from the official descriptions alone: each describes a single specific moment — a unique animal, a choice, a one-time stunt — rather than a repeatable activity. <strong>Unconfirmed:</strong> mission replay has not been verified for GTA VI yet, so treat these as “do it when the moment comes”, not as proven missables. Everything else in this guide is repeatable or story progress and cannot be missed.</p>
+    <ul class="trophy-list" id="missableList"></ul>
+  </section>
+
+  <section id="view-planner" class="view" hidden>
+    <h2>Next up — your plan</h2>
+    <p class="view-intro">Star trophies from their detail pane and they queue here. The suggestion below is the earliest unearned story trophy — the fastest route to the next unlock.</p>
+    <p class="suggestion" id="suggestion"></p>
+    <ul class="trophy-list" id="nextUpList"></ul>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades: the official PlayStation list as published on Exophase and PSNProfiles on 2026-11-18 (PSN targets such as “250 stunts” come from PSNProfiles). Every guide, step list and tip is this entry’s own words, written from the official descriptions; no guide text was copied from another site. A link would open only if you followed it — this app fetches nothing and works with the network off.</p>
+  <p><strong>Honesty note.</strong> Grand Theft Auto VI released 19 November 2026. Where the official description does not pin down a place, a step or a moment, this guide says so instead of inventing one. Missable flags are inferred, not confirmed. Difficulty and time are estimates.</p>
+  <p>Progress, notes and your Next-up queue are saved in this browser only (localStorage). Export saves them to a file; Import restores them. No account, no network, no Rockstar artwork — the look is this guide’s own.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
